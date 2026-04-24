@@ -1,79 +1,134 @@
-<h1 align="center">MERN Portfolio by Christopher Peterson.</h1>
-This Portfolio URL: Todo<br />
-Also, checkout my Vue demo: Todo
+<h1 align="center">MERN Portfolio</h1>
 
+<p align="center">
+  A full-stack MERN portfolio app built with React + Chakra UI, powered by an Express API and MongoDB.
+</p>
 
-### Tech Stack:
-```shell
-React.js, Node.js, Express.js, MongoDB, Chakra UI
-API
-UI With React.js and ChakraUI
-MongoDB is a NO-SQL database:
-Collections -> products -> each product as another document.
-Error Handling
-Deployment
-```
+<p align="center">
+  <a href="https://mern-demo-49es.onrender.com" target="_blank"><b>Live Demo</b></a>
+  ·
+  <a href="https://vue-demo-t89m.onrender.com" target="_blank"><b>Vue Demo</b></a>
+</p>
 
-### Commands That Have Been Run:
-```shell
-CD to MERN folder.
-npm install
-cd .\frontend
-npm i react-router-dom
-npm i zustand
-```
+---
 
-### Deploy Commands:
-```shell
-cd .\frontend
-npm run build
-cd to root
-npm install cross-env (for windows OS) then if applicable: npm audit fix
-(**installs build packages and installs dist folder)..
-npm run build
-npm run start
-```
+## Tech Stack
 
-created repo:
-cd to root
-git init
+- **Frontend:** React, React Router, Chakra UI
+- **State:** Zustand
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB (NoSQL)
+- **Deployment:** Render
 
-### Setup .env file
+---
 
-```shell
+## Project Structure (high level)
+
+- `frontend/` — React client (Vite + Chakra UI)
+- `/` (root) — Express API + build/start scripts
+
+---
+
+## Prerequisites
+
+- **Node.js** (LTS recommended)
+- **MongoDB** (Atlas or local)
+- **npm**
+
+---
+
+## Environment Variables
+
+Create a `.env` file in the project root:
+
+```bash
 MONGO_URI=your_mongo_uri
 PORT=5000
 ```
 
-### Run this app locally
+> Keep `.env` private (do not commit it).
 
-```shell
-npm run build
+---
+
+## Install & Run Locally
+
+From the project root:
+
+```bash
+npm install
 ```
 
-### Start the app
+Install frontend dependencies:
 
-```shell
+```bash
+cd frontend
+npm install
+```
+
+Start the app (production-style using the built frontend):
+
+```bash
+# from project root
+npm run build
 npm run start
 ```
 
-### About Me:
-```shell
-<br /><b>Welcome to my MERN-stack Frontend Engineer portfolio demo!</b><br />
-My name is Christopher Peterson. I’m a full‑stack software engineer focused on delivering polished UI/UX experiences along with reliable backend systems.<br />
-The code for this project, as well as my others, can be found at the
-GitHub link below:<br />
-<a href="">Todo Also, checkout my Vue demo!</a><br />
-<b>Email:</b> codingcowboy2026@gmail.com<br />
-<b>Phone:</b> (517) 719-0029 <br /><b>GitHub:</b>
-https://github.com/RocketDelivery2?tab=repositories <br />
-<b>LinkedIn:</b>
-https://www.linkedin.com/in/christopher-peterson-2ba8243b6/
+Then open: `http://localhost:5000`
+
+---
+
+## Common Dependency Notes
+
+If you’re setting up from scratch and you see missing-package errors, these are used in the frontend:
+
+```bash
+cd frontend
+npm i react-router-dom zustand
 ```
 
-### References:
-```shell
-Free public domain images used from: https://free-images.com/
-https://chakra-ui.com/docs/get-started/frameworks/vite
-freeCodeCamp.org
+On Windows, you may need `cross-env`:
+
+```bash
+npm i -D cross-env
 ```
+
+---
+
+## Deployment (Render)
+
+Typical build/start flow:
+
+```bash
+cd frontend
+npm run build
+
+cd ..
+npm run build
+npm run start
+```
+
+If `npm audit` suggests safe fixes:
+
+```bash
+npm audit fix
+```
+
+---
+
+## About
+
+My name is **Christopher Peterson**. I’m a full-stack software engineer focused on delivering polished UI/UX experiences along with reliable backend systems.
+
+- **Vue demo:** https://vue-demo-t89m.onrender.com  
+- **GitHub:** https://github.com/TeamBuilderApp?tab=repositories  
+- **LinkedIn:** https://www.linkedin.com/in/christopher-peterson-86728a303/  
+- **Email:** cpeterson.software.engineering@gmail.com  
+- **Phone:** (517) 297-5674
+
+---
+
+## References / Credits
+
+- Public domain images: https://free-images.com/
+- Chakra UI docs: https://chakra-ui.com/docs/get-started/frameworks/vite
+- freeCodeCamp.org
